@@ -44,12 +44,161 @@
       font-size: 1rem;
       color: #718096;
     }
+
+    .cat {
+      margin: 32px auto 0;
+      width: 120px;
+      position: relative;
+    }
+
+    .cat-body {
+      width: 80px;
+      height: 60px;
+      background: #f5a623;
+      border-radius: 50% 50% 45% 45%;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .cat-head {
+      width: 70px;
+      height: 55px;
+      background: #f5a623;
+      border-radius: 50%;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .cat-ear {
+      width: 0;
+      height: 0;
+      border-left: 14px solid transparent;
+      border-right: 14px solid transparent;
+      border-bottom: 24px solid #f5a623;
+      position: absolute;
+      top: -18px;
+    }
+
+    .cat-ear.left  { left: 4px; }
+    .cat-ear.right { right: 4px; }
+
+    .cat-ear-inner {
+      width: 0;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 14px solid #f9c97c;
+      position: absolute;
+      top: 6px;
+      left: -8px;
+    }
+
+    .cat-eye {
+      width: 12px;
+      height: 14px;
+      background: #333;
+      border-radius: 50%;
+      position: absolute;
+      top: 18px;
+    }
+
+    .cat-eye.left  { left: 14px; }
+    .cat-eye.right { right: 14px; }
+
+    .cat-eye::after {
+      content: '';
+      width: 4px;
+      height: 4px;
+      background: white;
+      border-radius: 50%;
+      position: absolute;
+      top: 2px;
+      left: 2px;
+    }
+
+    .cat-nose {
+      width: 8px;
+      height: 6px;
+      background: #e07b8a;
+      border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+      position: absolute;
+      top: 34px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .cat-whisker-group {
+      position: absolute;
+      top: 36px;
+    }
+
+    .cat-whisker-group.left  { left: -18px; }
+    .cat-whisker-group.right { right: -18px; }
+
+    .cat-whisker {
+      width: 22px;
+      height: 1.5px;
+      background: #aaa;
+      margin: 3px 0;
+    }
+
+    .cat-tail {
+      width: 14px;
+      height: 50px;
+      background: #f5a623;
+      border-radius: 7px 7px 10px 10px;
+      position: absolute;
+      bottom: 0;
+      right: -10px;
+      transform: rotate(20deg);
+      transform-origin: bottom center;
+    }
+
+    .cat-leg {
+      width: 16px;
+      height: 28px;
+      background: #f5a623;
+      border-radius: 0 0 8px 8px;
+      position: absolute;
+      bottom: -24px;
+    }
+
+    .cat-leg.fl { left: 10px; }
+    .cat-leg.fr { left: 30px; }
+    .cat-leg.bl { right: 30px; }
+    .cat-leg.br { right: 10px; }
   </style>
 </head>
 <body>
   <div class="card">
     <h1>Hello<span>一一江的江</span></h1>
     <p>Welcome to this page.</p>
+    <div class="cat">
+      <div class="cat-head">
+        <div class="cat-ear left"><div class="cat-ear-inner"></div></div>
+        <div class="cat-ear right"><div class="cat-ear-inner"></div></div>
+        <div class="cat-eye left"></div>
+        <div class="cat-eye right"></div>
+        <div class="cat-nose"></div>
+        <div class="cat-whisker-group left">
+          <div class="cat-whisker"></div>
+          <div class="cat-whisker"></div>
+          <div class="cat-whisker"></div>
+        </div>
+        <div class="cat-whisker-group right">
+          <div class="cat-whisker"></div>
+          <div class="cat-whisker"></div>
+          <div class="cat-whisker"></div>
+        </div>
+      </div>
+      <div class="cat-body">
+        <div class="cat-leg fl"></div>
+        <div class="cat-leg fr"></div>
+        <div class="cat-leg bl"></div>
+        <div class="cat-leg br"></div>
+        <div class="cat-tail"></div>
+      </div>
+    </div>
   </div>
 </body>
 </html>
