@@ -1,3 +1,4 @@
+# generated-by: github-action-n
 name: Deploy
 
 on:
@@ -8,6 +9,7 @@ on:
 env:
   REGION: asia-east1
   PROJECT_ID: vertex-ai-491502
+  SERVICE_NAME: hello-weq
 
 jobs:
   deploy:
@@ -23,9 +25,7 @@ jobs:
       - name: Set service name
         id: svc
         run: |
-          NAME="${{ github.event.repository.name }}"
-          NAME=$(echo "$NAME" | tr '[:upper:]' '[:lower:]' | sed 's/[^a-z0-9-]/-/g')
-          echo "name=$NAME" >> $GITHUB_OUTPUT
+          echo "name=${{ env.SERVICE_NAME }}" >> $GITHUB_OUTPUT
 
       - name: Check security report
         run: |

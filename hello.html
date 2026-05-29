@@ -44,12 +44,25 @@
       font-size: 1rem;
       color: #718096;
     }
+
+    .flower {
+      margin-top: 24px;
+      font-size: 3rem;
+      animation: sway 3s ease-in-out infinite;
+      display: inline-block;
+    }
+
+    @keyframes sway {
+      0%, 100% { transform: rotate(-8deg); }
+      50%       { transform: rotate(8deg); }
+    }
   </style>
 </head>
 <body>
   <div class="card">
     <h1>Hello<span>一一江的江</span></h1>
     <p>Welcome to this page.</p>
+    <div class="flower">&#x1F338;</div>
   </div>
 </body>
 </html>
